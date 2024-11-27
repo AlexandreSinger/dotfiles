@@ -44,6 +44,6 @@ let g:ycm_clangd_binary_path = exepath("/usr/bin/clangd-17")
 colorscheme codedark
 
 " go to last opened position
-autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe
-"normal! g`\"" | endif
+" autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
