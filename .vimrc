@@ -36,7 +36,7 @@ let g:cpp_class_scope_highlight = 1
 au BufNewFile,BufRead *.tpp set filetype=cpp
 
 " ycm config
-let g:ycm_python_binary_path = '/home/singera8/.local/bin/python3'
+let g:ycm_python_binary_path = 'python3'
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_clangd_binary_path = exepath("/usr/bin/clangd-17")
 
@@ -46,4 +46,8 @@ colorscheme codedark
 " go to last opened position
 " autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+vnoremap <leader>y :w !xclip -selection clipboard<CR>
+
+vnoremap <leader>p :r !xclip -o -selection clipboard
 

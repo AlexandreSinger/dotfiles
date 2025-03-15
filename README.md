@@ -7,6 +7,9 @@ apt install htop
 # Install TMUX
 apt install tmux
 
+# Install xclip (used for copying text to keyboard from vim with '<leader>y')
+apt install xclip
+
 # Move the tmux config file
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
