@@ -34,6 +34,7 @@ syntax enable
 
 let g:cpp_class_scope_highlight = 1
 au BufNewFile,BufRead *.tpp set filetype=cpp
+au BufNewFile,BufRead *.lib set filetype=txt
 
 " ycm config
 let g:ycm_python_binary_path = 'python3'
@@ -51,3 +52,8 @@ vnoremap <leader>y :w !xclip -selection clipboard<CR>
 
 vnoremap <leader>p :r !xclip -o -selection clipboard
 
+" Set the max copy size to 1000
+set viminfo='20,<1000,s1000
+
+" Show how many characters are highlighted in the bottom right corner
+set showcmd
